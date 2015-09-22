@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <servlet-name>LoginServelet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.LoginServelet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DiskDataServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.DiskDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.UploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.DownloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewDirServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.NewDirServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DeleteFileServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.DeleteFileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.liaoyb.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>GainIp</servlet-name>
+    <servlet-class>com.liaoyb.servlet.GainIp</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckUserExit</servlet-name>
+    <servlet-class>com.liaoyb.servlet.CheckUserExit</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckValideCode</servlet-name>
+    <servlet-class>com.liaoyb.servlet.CheckValideCode</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CheckUserState</servlet-name>
+    <servlet-class>com.liaoyb.servlet.CheckUserState</servlet-class>
+  </servlet>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServelet</servlet-name>
+    <url-pattern>/servlet/LoginServelet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DiskDataServlet</servlet-name>
+    <url-pattern>/servlet/DiskDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/servlet/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/servlet/UploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/servlet/DownloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewDirServlet</servlet-name>
+    <url-pattern>/servlet/NewDirServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteFileServlet</servlet-name>
+    <url-pattern>/servlet/DeleteFileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/servlet/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GainIp</servlet-name>
+    <url-pattern>/GainIp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckUserExit</servlet-name>
+    <url-pattern>/servlet/CheckUserExit</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckValideCode</servlet-name>
+    <url-pattern>/servlet/CheckValideCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckUserState</servlet-name>
+    <url-pattern>/servlet/CheckUserState</url-pattern>
+  </servlet-mapping>
+
+
+<listener>
+	<listener-class>com.liaoyb.web.listener.SessionCounter</listener-class>
+</listener>
+
+
+<!--  分布式session,Session默认有效期为10分钟-->
+<distributable/>
+
+<session-config>
+    <session-timeout>10</session-timeout>
+</session-config>
+
+</web-app>
